@@ -16,6 +16,7 @@ $(function () {
 $('.fa-bars , .sidebar a').on('click', function () {
     $('.sidebar').animate({ width: 'toggle', padding: 'toggle' }, 600);
     $('.fa-bars').toggleClass('fa-times')
+    $('.sidebar a').css({ cssText: 'animation : slideUp 1s ease 0s' })
 })
 
 
@@ -65,7 +66,7 @@ async function getRandomDetails(id) {
     dispalyRandomDetails(data)
 }
 
-function dispalyRandomDetails(allRandom){
+function dispalyRandomDetails(allRandom) {
     let cartoona = `<div class="details">
         <div class="container">
             <div class="row gy-4 m-3 p-3" id="modal">
@@ -107,6 +108,6 @@ function dispalyRandomDetails(allRandom){
         </div>
     </div>`
     $('.row').html(cartoona)
-    
+
 
 }
